@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collector Adventure</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <div class="menu" id="mainMenu">
+        <h1>Collector Adventure</h1>
+        <div class="menu-buttons">
+            <button onclick="startGame('classic')">Classic Mode</button>
+            <button onclick="startGame('timeAttack')">Time Attack Mode</button>
+        </div>
+        <div class="high-scores">
+            <div class="score-column">
+                <h2>Classic Mode</h2>
+                <ul id="classicScores"></ul>
+            </div>
+            <div class="score-column">
+                <h2>Time Attack</h2>
+                <ul id="timeAttackScores"></ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="game-container" id="gameContainer" style="display: none;">
+        <div class="game-header">
+            <span id="score">Score: 0</span>
+            <span id="level">Level: 1</span>
+            <span id="lives">Lives: 3</span>
+            <span id="timer" style="display: none">Time: 2:00</span>
+        </div>
+        <canvas id="gameCanvas"></canvas>
+        <div class="game-controls">
+            <button onclick="pauseGame()">Pause</button>
+            <button onclick="returnToMenu()">Menu</button>
+        </div>
+    </div>
+
+    <script src="js/classes.js"></script>
+    <script src="js/game.js"></script>
+</body>
+</html>
